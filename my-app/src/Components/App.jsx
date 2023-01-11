@@ -9,10 +9,11 @@ function MakeTask(task) {
 }
 
 function App() {
-  return (
+  return ( 
     <div>
       <Header />
-      <di className="dictionary">{tasks.map(MakeTask)}</di>
+
+      {tasks.map(MakeTask)}
 
       <Footer />
     </div>
