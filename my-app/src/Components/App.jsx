@@ -4,19 +4,17 @@ import Note from "./Note";
 import Footer from "./Footer";
 import tasks from "../task";
 
-function MakeTask(task) {
-  return <Note key={task.key} title={task.title} info={task.info} />;
-}
-
 function App() {
-  return ( 
-    <div>
+  return (
+    <div1>
       <Header />
-
-      {tasks.map(MakeTask)}
-
+      <div className="note-container">
+        {tasks.map((task) => (
+          <Note key={task.key} title={task.title} info={task.info} />
+        ))}
+      </div>
       <Footer />
-    </div>
+    </div1>
   );
 }
 export default App;
