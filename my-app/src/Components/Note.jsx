@@ -6,6 +6,14 @@ function Note(props) {
       <h1>{props.title}</h1>
       <hr />
       <p>{props.content}</p>
+      <button
+        className="delete"
+        onClick={() => {
+          props.delete(props.id);
+        }}
+      >
+        Delete
+      </button>
     </div>
   );
 }

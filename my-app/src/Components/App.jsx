@@ -9,20 +9,29 @@ function App() {
 
   function addNote(newNote) {
     console.log(newNote);
-    setNotes((prevNotes) => {
+    return setNotes((prevNotes) => {
       return [...prevNotes, newNote];
     });
   }
+
+  function handleDelete(id) {
+    setNotes((prevNotes) => {
+      return prevNotes.filter((noteItem, index) => index !== id);
+    });
+  }
+
   return (
     <div>
       <Header />
       <CreateArea addNote={addNote} />
       <div className="note-container">
-        {notes.map((noteItem) => (
+        {notes.map((noteItem, index) => (
           <Note
-            key={noteItem.key}
+            key={index}
+            id={index}
             title={noteItem.title}
             content={noteItem.content}
+            delete={handleDelete}
           />
         ))}
       </div>
