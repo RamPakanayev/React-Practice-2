@@ -9,12 +9,13 @@ html {
 }
 
 body {
-  background: #eee;
+  background: #3c6255;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   padding: 0 16px;
 }
 
 header {
-  background-color: #f5ba13;
+  background-color: #a6bb8d;
   margin: auto -16px;
   padding: 16px 32px;
 }
@@ -76,7 +77,7 @@ hr {
   position: relative;
   float: right;
   margin-right: 10px;
-  color: #f5ba13;
+  color: #61876e;
   border: none;
   width: 36px;
   height: 36px;
@@ -107,7 +108,7 @@ form button {
   position: absolute;
   right: 18px;
   bottom: -18px;
-  background: #f5ba13;
+  background: #61876e;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -116,4 +117,18 @@ form button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+form button:hover {
+  background: #55d381;
+  color: white;
+}
+
+.delete {
+  border-radius: 20%;
+}
+
+.delete:hover {
+  color: white;
+  background-color: #55d381;
+  border-radius: 20%;
 }
