@@ -9,7 +9,7 @@ function App() {
   const [notes, setNotes] = useState([]);
 
   function addNote(newNote) {
-    console.log(newNote);
+    // console.log(newNote);
     return setNotes((prevNotes) => {
       return [...prevNotes, newNote];
     });
@@ -20,7 +20,7 @@ function App() {
       return prevNotes.filter((noteItem, index) => index !== id);
     });
   }
-  function bbb() {
+  function showContent() {
     if (notes.length == 0) {
       return task.map((task) => (
         <Note key={task.key} title={task.title} content={task.content} />
@@ -33,7 +33,6 @@ function App() {
           title={noteItem.title}
           content={noteItem.content}
           delete={handleDelete}
-          z
         />
       ));
     }
@@ -43,7 +42,7 @@ function App() {
     <div>
       <Header />
       <CreateArea addNote={addNote} />
-      <div className="note-container">{bbb()}</div>
+      <div className="note-container">{showContent()}</div>
       <Footer />
     </div>
   );
