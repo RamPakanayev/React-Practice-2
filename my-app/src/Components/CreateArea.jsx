@@ -16,8 +16,7 @@ function CreateArea(props) {
         [name]: value,
       };
     });
-    // const t = note;
-    // console.log(t.title + " | " + t.content);
+ 
   }
   function submitNote(event) {
     event.preventDefault();
@@ -30,12 +29,12 @@ function CreateArea(props) {
           value={note.title}
           onChange={handleChange}
           name="title"
-          placeholder="title"
+          placeholder="Add a title ..."
         />
         <textarea
           name="content"
           value={note.content}
-          placeholder="content"
+          placeholder="Add a content ..."
           rows="3"
           onChange={handleChange}
         />
