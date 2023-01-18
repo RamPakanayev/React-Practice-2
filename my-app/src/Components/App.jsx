@@ -4,7 +4,7 @@ import TaskApp from "./TaskApp";
 function App() {
   return (
     <div>
-      <TaskApp />{" "}
+      <TaskApp />
     </div>
   );
 }
